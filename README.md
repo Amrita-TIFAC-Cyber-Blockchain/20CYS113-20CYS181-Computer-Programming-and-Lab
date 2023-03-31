@@ -19,6 +19,24 @@
 | CO3 | Make use of the programming constructs appropriately and effectively while developing computer programs. |
 | CO4 | Develop computer programs that implement suitable algorithms for problem scenarios and applications |
 
+
+### Course Plan
+
+| Unit # | Lecture No. | Topic | No. of Hours |
+|:------:|:-----------:|:-------|:------------:|
+|    1   |             | Introduction and Review of C language constructs. |   |
+|    1   |             | Functions – inter function communication standard functions, scope. | | 
+|    1   |             | Recursion – recursive definition, recursive solution, <br/> designing recursive functions, limitations of recursion.  | | 
+|   1    |             | Arrays – 1D numeric    | |
+|   1    |             | Searching and sorting, 2D numeric arrays | |
+|   2    |             | Pointers: introduction |  |
+|   2    |             | Compatibility, arrays and pointers |  |
+|   2    |             | Dynamic memory allocation, arrays of pointers, pointer arithmetic. |
+|   2    |             | Strings: fixed length and variable length strings, <br/> strings and characters, string input, <br/> output, array of strings, string manipulation functions, sorting of strings. | | 
+|   3    |             | Structures: structure vs array comparison | |
+|   3    |             | Complex structures, structures and functions, Union | |
+|   3    |             | Files and streams, file input output, command line arguments | |
+
 ### Evaluation Criteria - 20CYS113
 
 | Components | Marks |
@@ -45,16 +63,15 @@
 |:------------:|:-----:|
 | Pair Programmer Selection | 12 - Mar - 2023 |
 | Project Team Selection | 12 - Mar - 2023 |
-| Contest - 1 | 27 - Mar - 2023 |
-| Contest - 2 | 10 - Apr - 2023 |
-| Periodicals I | TBD |
-| Contest - 3 | 28 - Apr - 2023 |
+| Contest - 1 | 11 - Apr - 2023 |
+| Periodicals I | 25 - Apr - 2023 |
+| Contest - 2 | 28 - Apr - 2023 |
 | Mini-Project Review 1 | 04 - May - 2023 |
-| Contest - 4 | 12 - May - 2023 |
+| Contest - 3 | 12 - May - 2023 |
 | Periodicals II | TBD |
-| Contest - 5 | 05 - Jun - 2023 |
+| Contest - 4 | 05 - Jun - 2023 |
 | Mini-Project Review 2 | 15 - Jun - 2023 |
-| Contest - 6 | 05 - Jul - 2023 |
+| Contest - 5 | 05 - Jul - 2023 |
 | Mini-Project Review Final | 11 - Jul - 2023 |
 | End Semester | TBD |
 
