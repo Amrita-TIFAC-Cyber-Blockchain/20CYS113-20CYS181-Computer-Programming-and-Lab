@@ -97,7 +97,7 @@ int main() {
 
 ### Output
 
-<a href="https://imgbb.com/"><img src="https://i.ibb.co/w0G12G8/fileread-op.png" alt="fileread-op" border="0"></a>
+<img src="https://i.ibb.co/w0G12G8/fileread-op.png" alt="fileread-op" border="0">
 
 ## Writing contents to the file
 
@@ -144,7 +144,7 @@ int main() {
 
 ### Output
 
-<a href="https://ibb.co/k5LkyGQ"><img src="https://i.ibb.co/q7HXnDk/filewrite-op.png" alt="filewrite-op" border="0"></a>
+<img src="https://i.ibb.co/q7HXnDk/filewrite-op.png" alt="filewrite-op" border="0">
 
-Posted on: 14th June, 2023.
+Posted on: 14th June, 2023 in [HPOJ](https://hpoj.cb.amrita.edu:8000/problem/20cys113ramfile01).
 
