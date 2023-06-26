@@ -4,8 +4,6 @@
 
 ## Project Topics and Team
 
-## Teams
-
 | Team Number | Team Members | Survey Title | 
 |:-----------:|:------------:|:------------:|
 |    CP-01    | Adarsh R K <br/> Namitha Sudhishkumar Nair <br/> Anagh Shaji Plamoottukada | Bank Management System | 
@@ -21,11 +19,11 @@
 |    CP-11    | Burla Rushyendra Reddy <br/> Pillimetla Vamsi <br/> Vajjula Satya Siddardha <br/> Yallanuru Kishan Sai | Airline Ticketing System | 
 |    CP-12    | Chitla Vyshali <br/> Chinni Nagasree Hansica <br/> Marri Sanju <br/> Tangella Sree Chandan | Encryption and Decryption Calculator |
 |    CP-13    | Charan K <br/> Midhrujayan K <br/> R M Naren Adithya <br/> Ramraj S | Movie Ticketing System | 
-|    CP-14    | G Vettrivel <br/> | TBD | 
+|    CP-14    | G Vettrivel <br/> Vijayeswar <br/> Vishal R S | Secure Text Editor | 
 |    CP-15    | Harshith Gangisetty <br/> Saride Someswara Sai Sri Chakri <br/> Nedurumalli Vedvarshith Reddy <br/> Palakurty Roopak Naga Venkata Sree Sai | File-based DNS Simulator | 
 |    CP-16    | Karri Jeeshitha <br/> Lalitha K <br/> Mareddy Sai Tejas <br/> Parthiv Kumar Nikku | Notification Center | 
 |    CP-17    | Karthick M <br/> Kaushik M <br/> Logesh R <br/> Rathnesh R | Ticketing System | 
-|    CP-18    | Meera N <br/> S Parvathi <br/> Amita Narayanan Kutty <br/> Rudra Sree Lakshmi | TBD  | 
+|    CP-18    | Meera N <br/> S Parvathi <br/> Amita Narayanan Kutty <br/> Rudra Sree Lakshmi | Puzzle based Escape Game | 
 |    CP-19    | Navarang C D <br/> Rahul Shankar V <br/> Reddicherla Thanuj <br/> Nandana Mahesh | Bank Management System | 
-|    CP-20    | Vishal R S | TBD | 
+
 
