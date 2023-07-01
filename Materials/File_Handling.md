@@ -171,9 +171,12 @@ int main() {
     // Read the file line by line
     while (fgets(line, MAX_LINE_LENGTH, file) != NULL) {
         // Remove the newline character at the end of the line
+        // strcspn(line, "\n") finds the position of the newline character in the line string, and line[strcspn(line, "\n")] = '\0';
+        // replaces the newline character with the null character to terminate the string at that point.
         line[strcspn(line, "\n")] = '\0';
 
         // Split the line into username and password
+        // strtok() to tokenize the 'line' string based on the delimiter ":"
         char *username = strtok(line, ":");
         char *password = strtok(NULL, ":");
 
@@ -194,6 +197,7 @@ int main() {
 ### Input 
 
 <img src="https://i.ibb.co/WtKyTzz/userdata-txt.png" alt="userdata-txt" border="0">
+
 ### Output
 
 <img src="https://i.ibb.co/Z1gknx3/line-output-parse-userdata.png" alt="line-output-parse-userdata" border="0">
