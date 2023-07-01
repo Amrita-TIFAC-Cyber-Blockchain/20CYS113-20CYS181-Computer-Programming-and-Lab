@@ -60,7 +60,7 @@ while (!feof(file)) {
 - "w+": Opens a file for both reading and writing. If the file exists, its previous contents are truncated. If the file does not exist, a new file is created.
 - "a+": Opens a file for both reading and appending. Data can be read or written at any position in the file. If the file does not exist, a new file is created.
 
-## Reading contents from a file
+## Reading contents from a file (character by character)
 
 ```
 #include <stdio.h>
@@ -148,3 +148,52 @@ int main() {
 
 Posted on: 14th June, 2023 in [HPOJ](https://hpoj.cb.amrita.edu:8000/problem/20cys113ramfile01).
 
+## Reading contents from a file (line by line) - Example to parse 'username' and 'password'
+
+```
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+#define MAX_LINE_LENGTH 100
+
+int main() {
+    FILE *file;
+    char line[MAX_LINE_LENGTH];
+
+    // Open the file for reading
+    file = fopen("userpass.txt", "r");
+    if (file == NULL) {
+        printf("Failed to open the file.\n");
+        return 1;
+    }
+
+    // Read the file line by line
+    while (fgets(line, MAX_LINE_LENGTH, file) != NULL) {
+        // Remove the newline character at the end of the line
+        line[strcspn(line, "\n")] = '\0';
+
+        // Split the line into username and password
+        char *username = strtok(line, ":");
+        char *password = strtok(NULL, ":");
+
+        // Print the parsed username and password
+        printf("Username: %s\n", username);
+        printf("Password: %s\n", password);
+        printf("-----------------\n");
+    }
+
+    // Close the file
+    fclose(file);
+
+    return 0;
+}
+
+```
+
+### Input 
+
+<img src="https://i.ibb.co/WtKyTzz/userdata-txt.png" alt="userdata-txt" border="0">
+### Output
+
+<img src="https://i.ibb.co/Z1gknx3/line-output-parse-userdata.png" alt="line-output-parse-userdata" border="0">
