@@ -1,6 +1,6 @@
 # 20CYS113 - Computer-Programming and 20CYS181 - Computer Programming Lab 
-![](https://img.shields.io/badge/Batch-22CYS-lightgreen) ![](https://img.shields.io/badge/UG-blue) ![](https://img.shields.io/badge/Subject-CP-blue)
-![](https://img.shields.io/badge/-HPOJ-brown) ![](https://img.shields.io/badge/Additional_Coverage-Code_Review-purple)  <br/>
+![](https://img.shields.io/badge/Batch-22CYS-lightgreen) ![](https://img.shields.io/badge/UG-blue) ![](https://img.shields.io/badge/CP-20CYS113-blue)  ![](https://img.shields.io/badge/CPL-20CYS181-blue)
+![](https://img.shields.io/badge/-HPOJ-brown) <br/>
 ![](https://img.shields.io/badge/Lecture-3-orange) ![](https://img.shields.io/badge/Credits-3-orange) <br/>
 ![](https://img.shields.io/badge/Practical-3-orange) ![](https://img.shields.io/badge/Credits-1-orange) 
 
@@ -22,27 +22,32 @@
 
 ### Course Plan
 
-| Unit # | Lecture No. | Topic | No. of Hours |
-|:------:|:-----------:|:-------|:------------:|
-|    1   |             | Introduction and Review of C language constructs. |   |
-|    1   |             | Functions – inter function communication standard functions, scope. | | 
-|    1   |             | Recursion – recursive definition, recursive solution, <br/> designing recursive functions, limitations of recursion.  | | 
-|   1    |             | Arrays – 1D numeric    | |
-|   1    |             | Searching and sorting, 2D numeric arrays | |
-|   2    |             | Pointers: introduction |  |
-|   2    |             | Compatibility, arrays and pointers |  |
-|   2    |             | Dynamic memory allocation, arrays of pointers, pointer arithmetic. |
-|   2    |             | Strings: fixed length and variable length strings, <br/> strings and characters, string input, <br/> output, array of strings, string manipulation functions, sorting of strings. | | 
-|   3    |             | Structures: structure vs array comparison | |
-|   3    |             | Complex structures, structures and functions, Union | |
-|   3    |             | Files and streams, file input output, command line arguments | |
+| Unit # | Topic | No. of Hours |
+|:------:|:-------|:------------:|
+|    1   | Introduction and Review of C language constructs. |   |
+|    1   | Functions – inter function communication standard functions, scope. | | 
+|    1   | Recursion – recursive definition, recursive solution, <br/> designing recursive functions, limitations of recursion.  | | 
+|   1    | Arrays – 1D numeric    | |
+|   1    | Searching and sorting, 2D numeric arrays | |
+|   2    | Pointers: introduction |  |
+|   2    | Compatibility, arrays and pointers |  |
+|   2    | Dynamic memory allocation, arrays of pointers, pointer arithmetic. |
+|   2    | Strings: fixed length and variable length strings, <br/> strings and characters, string input, <br/> output, array of strings, string manipulation functions, sorting of strings. | | 
+|   3    | Structures: structure vs array comparison | |
+|   3    | Complex structures, structures and functions, Union | |
+|   3    | Files and streams, file input output, command line arguments | |
+
+#### Links
+- [Materials](Materials)
+- [Project Teams and Topics](Projects.md)
+- [Record](Record.md)
 
 ### Evaluation Criteria - ![](https://img.shields.io/badge/-20CYS113-blue)
 
 | Components | Marks |
 |:----------|:-----:|
-| **[Internal]** Monthly Quiz (3 Nos) | 10 |
-| **[Internal]** Assignments (3 Nos) | 10 |
+| **[Internal]** Quiz | 10 |
+| **[Internal]** Assignments | 10 |
 | **[Internal]** Periodical I | 15 |
 | **[Internal]** Periodical II | 15 |
 | **[External]** End-Semester Exam | 50 |
@@ -51,7 +56,7 @@
 
 | Components | Marks |
 |:----------|:-----:|
-| **[Internal]** Assignments (4 Nos) | 20 |
+| **[Internal]** Practice Exercises (HPOJ) | 20 |
 | **[Internal]** Mini-Project | 30 |
 | **[Internal]** Periodical I | 15 |
 | **[Internal]** Periodical II | 15 |
