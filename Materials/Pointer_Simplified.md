@@ -31,3 +31,10 @@ value |  42   |   ptr  | 0x1000 |   ptrToPtr  | 0x2000 |
       +-------+        +--------+             +--------+
         0x1000           0x2000                 0x4000
 ```
+
+## Illustration
+
+<p align="center">
+	<img src="../Assets/image/Pointer_to_Pointers.png" width=1200 />
+</p>
+
