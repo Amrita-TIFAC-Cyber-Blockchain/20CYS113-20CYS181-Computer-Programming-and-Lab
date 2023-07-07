@@ -4,7 +4,17 @@
 
 ## Hash Calculation and Comparison
 
-Assuming the file name is _hash.c_, then to compile _gcc hash.c -o hash -lssl -lcrypto_
+### Install the library
+```
+sudo apt-get install libssl-dev
+```
+### Compiling the program
+
+Assuming the file name is _hash.c_, then to compile 
+
+```
+gcc hash.c -o hash.o -lssl -lcrypto
+```
 
 ```
 #include <stdio.h>
