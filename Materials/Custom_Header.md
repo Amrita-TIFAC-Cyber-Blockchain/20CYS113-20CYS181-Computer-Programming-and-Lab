@@ -4,8 +4,11 @@
 
 ## Own Header File
 
-Download ```rebind.h``` from [here](Materials/rebind.zip)
+Download ```rebind.h``` from [here](rebind.zip)
 
+The difference between <> and "" is:
+- <>  are used to include standard library header files. These files are typically provided by the compiler or standard library and are located in predefined system directories. You don't need to specify the file path explicitly. (<stdio.h>, <math.h>, <string.h>,..)
+- "" are used to include header files that are part of your project or located in specific directories. These files are typically user-defined header files, and you need to specify the relative or absolute file path within the quotation marks. ("rebind.h", "ram.h",...)
 ```
 #include<stdio.h>
 #include"rebind.h"
