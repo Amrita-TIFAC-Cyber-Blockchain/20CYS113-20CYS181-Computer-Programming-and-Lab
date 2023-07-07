@@ -38,3 +38,9 @@ int main() {
 }
 
 ```
+
+## Illustration
+
+<p align="center">
+	<img src="../Assets/image/Pointer_Arithmetic.png" width=1200 />
+</p>
