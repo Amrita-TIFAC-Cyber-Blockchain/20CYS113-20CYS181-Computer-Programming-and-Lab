@@ -37,7 +37,7 @@
 |   3    |             | Complex structures, structures and functions, Union | |
 |   3    |             | Files and streams, file input output, command line arguments | |
 
-### Evaluation Criteria - 20CYS113
+### Evaluation Criteria - ![](https://img.shields.io/badge/-20CYS113-blue)
 
 | Components | Marks |
 |:----------|:-----:|
@@ -47,7 +47,7 @@
 | **[Internal]** Periodical II | 15 |
 | **[External]** End-Semester Exam | 50 |
 
-### Evaluation Criteria - 20CYS181
+### Evaluation Criteria - ![](https://img.shields.io/badge/-20CYS181-darkblue)
 
 | Components | Marks |
 |:----------|:-----:|
@@ -59,21 +59,17 @@
 
 ### Dates and Deadlines
 
-| Deadline for | Dates |
-|:------------:|:-----:|
-| Pair Programmer Selection | 12 - Mar - 2023 |
-| Project Team Selection | 12 - Mar - 2023 |
-| Contest - 1 | 11 - Apr - 2023 |
-| Periodicals I | 25 - Apr - 2023 |
-| Contest - 2 | 28 - Apr - 2023 |
-| Mini-Project Review 1 | 04 - May - 2023 |
-| Contest - 3 | 12 - May - 2023 |
-| Periodicals II | TBD |
-| Contest - 4 | 05 - Jun - 2023 |
-| Mini-Project Review 2 | 15 - Jun - 2023 |
-| Contest - 5 | 05 - Jul - 2023 |
-| Mini-Project Review Final | 11 - Jul - 2023 |
-| End Semester | TBD |
+| Course Code | Deadline for | Dates |
+|:-----------:|:------------:|:-----:|
+| ![](https://img.shields.io/badge/-20CYS113-blue) | Periodicals I | 25 - Apr - 2023 |
+| ![](https://img.shields.io/badge/-20CYS181-darkblue) | Periodicals I | 16 - May - 2023 |
+| ![](https://img.shields.io/badge/-20CYS113-blue) | Periodicals II | 02 - Jun - 2023 |
+| ![](https://img.shields.io/badge/-20CYS113-blue) | Quiz | 15 - Jun - 2023 |
+| ![](https://img.shields.io/badge/-20CYS181-darkblue) | Periodicals II | 16 - Jun - 2023 |
+| ![](https://img.shields.io/badge/-20CYS181-darkblue) | Mini-Project Review | 05 - Jul - 2023 |
+| ![](https://img.shields.io/badge/-20CYS181-darkblue) | End Semester | 11 - July - 2023 |
+| ![](https://img.shields.io/badge/-20CYS181-darkblue) |  Mini-Project Review Final | 11 - Jul - 2023 |
+| ![](https://img.shields.io/badge/-20CYS113-blue) | End Semester | 24 - July - 2023 |
 
 ### :green_book: Text and Reference Books
  - **Text:** Forouzan BA, Gilberg RF. Computer Science: A structured programming approach using C. Third Edition, Cengage Learning; 2006.
