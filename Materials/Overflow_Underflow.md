@@ -102,3 +102,92 @@ long double underflow = LDBL_MIN;   // Minimum normalized value for a long doubl
 overflow *= 2;   // Overflow: Value becomes infinity
 underflow /= 2;  // Underflow: Value becomes denormalized or rounded to zero
 ```
+
+## Example of Overflow and Underflow Vulnerability
+
+```
+#include <stdio.h>
+
+// Function to perform a deposit operation
+// Takes the current balance and the deposit amount as parameters
+// Returns the updated balance after the deposit
+unsigned int deposit(unsigned int balance, unsigned int amount) {
+    return balance + amount;
+}
+
+// Function to perform a withdrawal operation
+// Takes the current balance and the withdrawal amount as parameters
+// Returns the updated balance after the withdrawal
+unsigned int withdraw(unsigned int balance, unsigned int amount) {
+     return balance - amount;
+}
+
+int main() {
+    unsigned int balance = 1004967295; // Initial balance of ₹1004967295
+
+    printf("Initial balance: ₹%u\n", balance);
+
+    // Deposit
+    unsigned int depositAmount = 3290000001; // Deposit amount of ₹3290000001
+    balance = deposit(balance, depositAmount);
+    printf("Balance after deposit: (Overflow) ₹%u\n", balance);
+
+    // Withdraw
+    unsigned int withdrawAmount = 10; // Withdraw amount of ₹10
+    balance = withdraw(balance, withdrawAmount);
+    printf("Balance after withdrawal: (Underflow) ₹%u\n", balance);
+
+    return 0;
+}
+```
+
+### Handling Overflow and Underflow Vulnerability
+
+```
+#include <stdio.h>
+#include <stdbool.h>
+#include <limits.h>
+
+// Function to perform a deposit operation
+// Returns the updated balance after the deposit
+unsigned int deposit(unsigned int balance, unsigned int amount) {
+    // Check if the deposit amount exceeds the maximum balance
+    if (UINT_MAX - balance < amount) {
+        printf("Deposit amount exceeds the maximum balance.\n");
+        return balance;
+    } else {
+        return balance + amount;
+    }
+}
+
+// Function to perform a withdrawal operation
+// Returns the updated balance after the withdrawal
+unsigned int withdraw(unsigned int balance, unsigned int amount) {
+    // Check if the balance is insufficient for withdrawal
+    if (balance < amount) {
+        printf("Insufficient balance for withdrawal.\n");
+        return balance;
+    } else {
+        return balance - amount;
+    }
+}
+
+int main() {
+    unsigned int balance = 1004967295; // Initial balance of ₹1004967295
+
+    printf("Initial balance: ₹%u\n", balance);
+
+    // Deposit
+    unsigned int depositAmount = 3290000001; // Deposit amount of ₹3290000001
+    balance = deposit(balance, depositAmount);
+    printf("Balance after deposit: ₹%u\n", balance);
+
+    // Withdraw
+    unsigned int withdrawAmount = 10; // Withdraw amount of ₹10
+    balance = withdraw(balance, withdrawAmount);
+    printf("Balance after withdrawal: ₹%u\n", balance);
+
+    return 0;
+}
+
+```
