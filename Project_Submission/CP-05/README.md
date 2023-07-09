@@ -12,7 +12,7 @@
  * Encryption and Decryption Calculator
  * Authors: Amal Ritessh A P, Ananth R, Mukund K, Shravan Krishnan.G
  * Created Date: 28-June-2023
- * Updated Date: 05-July-2023  
+ * Updated Date: 09-July-2023  
  */
 
 #include <stdio.h>
@@ -24,8 +24,35 @@ struct data{
     char decrypt[LENGTH];
 }store;
 
+void filestore(char text[LENGTH],char output[LENGTH],int menu_val){
+    FILE *file;
+    file=fopen("info.txt","a");
+    
+    //this is to add which cypher is used in file.
+    switch (menu_val){
+        case 1:
+            fprintf(file,"Shift cypher:\n");
+            break;
+        case 2:
+            fprintf(file,"Vigenere cypher:\n");
+            break;
+    }
 
-void shift_cypher(char text[LENGTH]){
+    //this is used to add the user input value in file.
+    fprintf(file,"Input : ");
+    fprintf(file,text);
+    fprintf(file,"\n");
+    
+    //this is used to add the output value in file.
+    fprintf(file,"Output: ");
+    fprintf(file,output);
+    fprintf(file,"\n\n");
+
+    fclose(file);
+}
+
+
+void shift_cypher(char text[LENGTH],int menu_val){
     int ed,key,loop=0;
     
     while(loop==0){
@@ -50,13 +77,14 @@ void shift_cypher(char text[LENGTH]){
                     printf("%c",store.encrypt[i]);
                 }
                 loop=1;
+                filestore(text,store.encrypt,menu_val);
                 break;
             case 2:
                 //shift cypher decryption
                 printf("enter key: ");
                 scanf("%d",&key);
                 for(int i=0;i<strlen(text);i++){
-                    if(((int)text[i]-key)<=32){
+                    if(((int)text[i]-key)<32){
                         store.decrypt[i]=(char)((((int)text[i]-key-32+122)%122));
                     }
                     else{
@@ -68,6 +96,7 @@ void shift_cypher(char text[LENGTH]){
                     printf("%c",store.decrypt[i]);
                 }
                 loop=1;
+                filestore(text,store.decrypt,menu_val);
                 break;
             default:
                 printf("invalid input");
@@ -76,7 +105,7 @@ void shift_cypher(char text[LENGTH]){
     }
 }
 
-void vigenere_cypher(char text[LENGTH]){
+void vigenere_cypher(char text[LENGTH],int menu_val){
     int ed,j=0,loop=0;
     char key[LENGTH];
     
@@ -106,6 +135,7 @@ void vigenere_cypher(char text[LENGTH]){
                     printf("%c",store.encrypt[i]);
                 }
                 loop=1;
+                filestore(text,store.encrypt,menu_val);
                 break;
 
             case 2:
@@ -130,6 +160,7 @@ void vigenere_cypher(char text[LENGTH]){
                     printf("%c",store.decrypt[i]);
                 }
                 loop=1;
+                filestore(text,store.decrypt,menu_val);
                 break;
 
             default:
@@ -152,11 +183,11 @@ int main(){
         
         switch (menu_val){
             case 1:
-                shift_cypher(text);
+                shift_cypher(text,menu_val);
                 loop=1;
                 break;
             case 2:
-                vigenere_cypher(text);
+                vigenere_cypher(text,menu_val);
                 loop=1;
                 break;
             default:
