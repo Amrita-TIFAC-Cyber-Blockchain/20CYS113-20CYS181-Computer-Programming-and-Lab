@@ -1,4 +1,4 @@
-# 20CYS113 - Computer-Programming and 20CYS181 - Computer Programming Lab 
+# 20CYS113 - Computer-Programming and 20CYS181 - Computer Programming Lab ![](https://img.shields.io/badge/-Completed-darkreen)
 ![](https://img.shields.io/badge/Batch-22CYS-lightgreen) ![](https://img.shields.io/badge/UG-blue) ![](https://img.shields.io/badge/CP-20CYS113-blue)  ![](https://img.shields.io/badge/CPL-20CYS181-blue)
 ![](https://img.shields.io/badge/-HPOJ-brown) <br/>
 ![](https://img.shields.io/badge/Lecture-3-orange) ![](https://img.shields.io/badge/Credits-3-orange) <br/>
@@ -75,6 +75,7 @@
 | ![](https://img.shields.io/badge/-20CYS181-darkblue) | End Semester | 11 - July - 2023 |
 | ![](https://img.shields.io/badge/-20CYS181-darkblue) |  Mini-Project Review Final | 11 - Jul - 2023 |
 | ![](https://img.shields.io/badge/-20CYS113-blue) | End Semester | 24 - July - 2023 |
+| ![](https://img.shields.io/badge/-20CYS113_20CYS181-blue) | Results Announcement | 18 - August - 2023 |
 
 ### :green_book: Text and Reference Books
  - **Text:** Forouzan BA, Gilberg RF. Computer Science: A structured programming approach using C. Third Edition, Cengage Learning; 2006.
