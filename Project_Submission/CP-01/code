@@ -1,0 +1,225 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
+
+#define MAX_USER 100
+#define MAX_U 100
+#define MAX_P 15
+typedef struct{
+        char uname[MAX_U];
+        char pass[MAX_P];
+        double balance;
+        int phone;
+        char DOB[10];
+        char email[50];
+        char nationality[100];
+}User;
+
+int valid_user(const char *uname,User *users,int tnum) {
+    if(strlen(uname)<4||strlen(uname)>100) {
+        return 0;
+    }
+
+    for(int i=0;i<tnum;i++){
+        if(strcmp(uname,users[i].uname)==0){
+            return 0;        }
+    }
+
+    return 1;
+}
+int valid_pass(const char *pass){
+    if(strlen(pass)<6||strlen(pass)>15){
+        return 0;}
+
+    return 1;}
+
+int read(User *users){
+    FILE *file = fopen("users.txt", "r");
+    if (file == NULL) {
+        printf("Sorry for the inconvience. System under repair.\n");
+        return 0;
+    }
+
+    int tnum = 0;
+    while (fscanf(file,"%s%s%lf%d%s%s%s",users[tnum].uname,users[tnum].pass,&users[tnum].balance,&users[tnum].phone,users[tnum].DOB,users[tnum].email,users[tnum].nationality)==7){
+	    tnum++;
+    }
+    fclose(file);
+    return tnum;
+}
+
+void update(User *users,int tnum) {
+    FILE *file=fopen("users.txt", "w");
+    if (file == NULL) {
+        printf("Error opening file.\n");
+        return;
+    }
+
+    for (int i = 0; i <tnum; i++) {
+        fprintf(file,"%s%s%lf%d%s%s%s",users[tnum].uname,users[tnum].pass,users[tnum].balance,users[tnum].phone,users[tnum].DOB,users[tnum].email,users[tnum].nationality);
+    }	
+
+    fclose(file);
+}
+
+int main() {
+    User users[MAX_USER];
+    int tnum= read(users);
+
+    char username[MAX_U];
+    char password[MAX_P];
+    double balance;
+    int phone;
+    char DOB[10];
+    char email[50];
+    char nationality[100];
+
+    printf("Welcome to the banking system!\n");
+    while (1) {
+        printf("Enter a username (4-100 characters): ");
+        scanf("%s", username);
+
+        if (valid_user(username, users,tnum)) {
+            break;
+        } else {
+            printf("Invalid username or username already exists. Please try again.\n");
+        }
+    }
+
+    while (1) {
+        printf("Enter a password (6-15 characters): ");
+        scanf("%s", password);
+
+        if (valid_pass(password)) {
+            break;
+        } else {
+            printf("Invalid password. Please try again.\n");
+        }
+    }
+    printf("Enter the amount you wish to deposit: ");
+    scanf("%lf", &balance);
+    printf("Enter your phone number: ");
+    scanf("%d",&phone);
+    printf("Enter your date of birth (DD/MM/YYYY): ");
+    scanf("%s",&DOB);
+    printf("Enter your email ID: ");
+    scanf("%s", &email);
+    printf("Enter your nationality: ");
+    scanf("%s",&nationality);
+
+    // Storing user details in the array
+    strncpy(users[tnum].uname, username, MAX_U);
+    strncpy(users[tnum].pass, password, MAX_P);
+    users[tnum].balance = balance;
+    users[tnum].phone=phone;
+    strncpy(users[tnum].DOB, DOB,10);
+    strncpy(users[tnum].email, email,50);
+    strncpy(users[tnum].nationality, nationality,100);
+    tnum++;
+
+    // Updating user information in the file
+    update(users,tnum);
+
+    printf("User registration successful. Thank you!\n");
+
+    return 0;
+}
+
+Module 2
+
+#include<stdio.h>
+#include<string.h>
+#include<stdlib.h>
+#define MAX_USER 100
+#define MAX_U 100
+#define MAX_P 15
+
+typedef struct{
+	char uname[MAX_U];
+	char pass[MAX_P];
+	double balance;
+	int phone;
+	char DOB[10];
+	char email[50];
+	char nationality[100];
+}User;
+
+int display(User *users){
+	FILE *file=fopen("Users.txt","r");
+	if(file==NULL){
+		printf("Sorry for the inconvience. The system is under repair. \n");
+		;}
+	int tnum=0;
+	while(fscanf(file,"%s%s%lf%d%s%s%s",users[tnum].uname,users[tnum].pass,&users[tnum].balance,&users[tnum].phone,users[tnum].DOB,users[tnum].email,users[tnum].nationality)==7){
+		tnum++;}
+	fclose(file);
+	return tnum;
+}
+
+int verify(const char *uname,const char *pass,User *users,int tnum)
+{
+	for(int i=0;i<tnum;i++){
+		if(strcmp(uname,users[i].uname)==0 && strcmp(pass,users[i].pass)==0){
+			return i;}
+	}
+	return -1;}
+
+void update(User *users,int tnum){
+	FILE *file=fopen("Users.txt","w");
+	if(file==NULL){
+		printf("Sorry for the inconvience. System under repair.\n");
+		return;}
+	for(int i=0;i<tnum;i++){
+		fprintf(file,"%s%s%lf%d%s%s%s\n",users[i].uname,users[i].pass,&users[i].balance,&users[i].phone,users[i].DOB,users[i].email,users[i].nationality);}
+	fclose(file);}
+
+
+int main()
+{
+	User users[MAX_USER];
+	int tnum=display(users);
+	char username[MAX_U];
+	char password[MAX_P];
+
+	printf("Please enter the username\n");
+	scanf("%s",username);
+	printf("Please enter the password\n");
+	scanf("%s",password);
+	int position=verify(username,password,users,tnum);
+	if(position==-1){
+		printf("Invalid username and password.Please Try again later \n");
+		return 0;}
+	User cuser=users[position];
+	double withdraw;
+	printf("Enter the amount to be withdrawn: ");
+	scanf("%lf",&withdraw);
+	if(withdraw<=0){
+		printf("Invalid amount.Please enter a valid amount to be withdrawn.\n");}
+	else if(withdraw>cuser.balance){
+		printf("Insufficient balance.\n");}
+	else{
+		cuser.balance-=withdraw;
+		update(users,tnum);
+		printf("Withdrawal succesful.Your new balance is Rs %.2lf \n",cuser.balance);}
+	
+	return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
